@@ -19,7 +19,7 @@ function serializeArray( /* Object */ form ) {
 
 	// collect values
 	// TODO: some form tags are missing
-	form.querySelectorAll( 'input:checked, select, [type=text]' ).forEach( function( element ) {
+	form.querySelectorAll( 'input:checked, select, [type=text], [type=search]' ).forEach( function( element ) {
 		query[ element.getAttribute('name') ].push( element.value );
 	} );
 	// TODO: check how the jquery.serializeArray() function handles this
